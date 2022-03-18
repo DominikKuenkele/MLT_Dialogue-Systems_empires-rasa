@@ -6,7 +6,7 @@ nlu:
     - Move the [Archer](sourceUnit) to [e 4](targetField).
     - Move the [Horseman](sourceUnit) to [e 4](targetField).
     - Move the [Spearman](sourceUnit) to [F5](targetField).
-    - [Archer] to [a 1](targetField).
+    - [Archer](sourceUnit) to [a 1](targetField).
 - intent: attack
   examples: |
    - Attack the [archer](targetUnit) with the [horseman](sourceUnit).
