@@ -1,0 +1,17 @@
+version: '3.0'
+
+nlu:
+- intent: move
+  examples: |
+    - Move the [archer]{sourceUnit} to [e 4](targetField).
+    - [Archer] to [a 1](targetField).
+- intent: attack
+  examples: |
+   - Attack the [archer](targetUnit) with the [horseman](sourceUnit).
+   - Destroy the [spearman](targetUnit) with the [archer](sourceUnit)
+- intent: produce
+  examples: |
+   - Produce an [archer](unit)
+   - Produce a [horseman](unit)
+   - Build a [spearman](unit)
+   - Train ann [archer](unit)
