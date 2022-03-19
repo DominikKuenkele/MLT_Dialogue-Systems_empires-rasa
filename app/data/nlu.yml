@@ -17,3 +17,12 @@ nlu:
    - Produce a [horseman](unit)
    - Build a [spearman](unit)
    - Train ann [archer](unit)
+- intent: skip
+  examples: |
+   - That's it
+   - I don't want to do more
+   - Enough
+   - Next round
+   - Next turn
+   - Close the turn
+   - Pass
