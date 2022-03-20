@@ -6,3 +6,4 @@ then
 fi
 
 rasa run --enable-api --port $PORT --cors '*'
+
