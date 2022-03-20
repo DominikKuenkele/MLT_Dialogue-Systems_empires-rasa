@@ -36,6 +36,7 @@ nlu:
    - Attack the bowman.
    - Destroy the horseman.
    - Attack with the [ranger]{"entity":"unit", "role": "source"}.
+   - Attack with the [pikeman]{"entity":"unit", "role": "source"}.
    - Destroy with the [spear men]{"entity":"unit", "role": "source"}.
    - Attack with the [knight]{"entity":"unit", "role": "source"}.
    - Attack the pikeman on [C1]{"entity":"field", "role": "target"} with the [spearman]{"entity":"unit", "role": "source"}.
@@ -59,7 +60,7 @@ nlu:
    - Produce a [spearmen](unit)
    - Build a [knight](unit)
    - Train a [ranger](unit)
-- intent: skip
+- intent: skip_round
   examples: |
    - That's it
    - I don't want to do more
@@ -68,9 +69,16 @@ nlu:
    - Next turn
    - Close the turn
    - Pass
+   - Do nothing.
+- intent: exit_question
+  examples: |
+   - Nevermind
+   - I want to do something else
+   - Do something else
 
 - synonym: archer
   examples: |
+   - Archer
    - bowman
    - ranger
    - bowmen
@@ -80,10 +88,15 @@ nlu:
    - knight
    - cavalry
    - horsemen
+   - Horseman
 - synonym: spearman
   examples: |
    - spearmen
+   - Spearmen
+   - Spearman
    - spear man
    - spear men
    - pikeman
+   - Pike man
    - lance
+   - Lance
