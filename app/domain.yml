@@ -1,7 +1,11 @@
 version: '3.0'
 
 entities:
-- sourceUnit
-- targetUnit
-- targetField
-- unit
+  - unit:
+      roles:
+      - target
+      - source
+  - field:
+      roles:
+      - target
+      - source

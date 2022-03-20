@@ -3,20 +3,62 @@ version: '3.0'
 nlu:
 - intent: move
   examples: |
-    - Move the [Archer](sourceUnit) to [e 4](targetField).
-    - Move the [Horseman](sourceUnit) to [e 4](targetField).
-    - Move the [Spearman](sourceUnit) to [F5](targetField).
-    - [Archer](sourceUnit) to [a 1](targetField).
+    - Move the [archer]{"entity":"unit", "role": "source"} to [E4]{"entity":"field", "role": "target"}.
+    - Move the [horseman]{"entity":"unit", "role": "source"} to [G5]{"entity":"field", "role": "target"}.
+    - Move the [rider]{"entity":"unit", "role": "source"} to [B85]{"entity":"field", "role": "target"}.
+    - Move the [spearman]{"entity":"unit", "role": "source"} to [F11]{"entity":"field", "role": "target"}.
+    - [archer]{"entity":"unit", "role": "source"} to [A1]{"entity":"field", "role": "target"}.
+    - Move the [bowman]{"entity":"unit", "role": "source"}.
+    - Move the [knight]{"entity":"unit", "role": "source"} to [X1]{"entity":"field", "role": "target"}.
+    - [Cavalry]{"entity":"unit", "role": "source"} to [X1]{"entity":"field", "role": "target"}.
+    - Place the [lance]{"entity":"unit", "role": "source"}
+    - Place the [ranger]{"entity":"unit", "role": "source"}
+    - Move the [bowmen]{"entity":"unit", "role": "source"}
+    - [horsemen]{"entity":"unit", "role": "source"} to [B7]{"entity":"field", "role": "target"}.
+    - Move the [spearmen]{"entity":"unit", "role": "source"} to [G12]{"entity":"field", "role": "target"}.
+    - Move the [spear man]{"entity":"unit", "role": "source"}.
+    - Place the [spear men]{"entity":"unit", "role": "source"}
+    - Move the [pikeman]{"entity":"unit", "role": "source"} to [C3]{"entity":"field", "role": "target"}.
 - intent: attack
   examples: |
-   - Attack the [archer](targetUnit) with the [horseman](sourceUnit).
-   - Destroy the [spearman](targetUnit) with the [archer](sourceUnit)
+   - Attack the unit on [F1]{"entity":"field", "role": "target"} with the [horseman]{"entity":"unit", "role": "source"}.
+   - Attack the unit on [A1]{"entity":"field", "role": "target"} with the [bowman]{"entity":"unit", "role": "source"}.
+   - Attack the base on [G2]{"entity":"field", "role": "target"} with the [spear man]{"entity":"unit", "role": "source"}.
+   - Attack the archer on [A11]{"entity":"field", "role": "target"} with the [archer]{"entity":"unit", "role": "source"}.
+   - Destroy [B3]{"entity":"field", "role": "target"} with the [pikeman]{"entity":"unit", "role": "source"}.
+   - Destroy [F14]{"entity":"field", "role": "target"} with the [rider]{"entity":"unit", "role": "source"}.
+   - Destroy the unit on [V14]{"entity":"field", "role": "target"} with the [cavalry]{"entity":"unit", "role": "source"}.
+   - Destroy the unit on [K4]{"entity":"field", "role": "target"} with the [bowmen]{"entity":"unit", "role": "source"}.
+   - Attack [G72]{"entity":"field", "role": "target"}.
+   - Attack [F2]{"entity":"field", "role": "target"}.
+   - Destroy [K2]{"entity":"field", "role": "target"}.
+   - Attack the archer.
+   - Attack the bowman.
+   - Destroy the horseman.
+   - Attack with the [ranger]{"entity":"unit", "role": "source"}.
+   - Destroy with the [spear men]{"entity":"unit", "role": "source"}.
+   - Attack with the [knight]{"entity":"unit", "role": "source"}.
+   - Attack the pikeman on [C1]{"entity":"field", "role": "target"} with the [spearman]{"entity":"unit", "role": "source"}.
+   - Attack the unit on [G3]{"entity":"field", "role": "target"} with the [spearmen]{"entity":"unit", "role": "source"}.
+   - Attack the unit on [L33]{"entity":"field", "role": "target"} with the [lance]{"entity":"unit", "role": "source"}.
 - intent: produce
   examples: |
    - Produce an [archer](unit)
-   - Produce a [horseman](unit)
+   - Produce a [pikeman](unit)
    - Build a [spearman](unit)
-   - Train ann [archer](unit)
+   - Train an [archer](unit)
+   - Produce a [ranger](unit)
+   - Produce a [horseman](unit)
+   - Build a [horsemen](unit)
+   - Train a [rider](unit)
+   - Produce a [lance](unit)
+   - Produce a [spear man](unit)
+   - Build a [bowmen](unit)
+   - Train a [pikeman](unit)
+   - Produce an [archer](unit)
+   - Produce a [spearmen](unit)
+   - Build a [knight](unit)
+   - Train a [ranger](unit)
 - intent: skip
   examples: |
    - That's it
@@ -26,3 +68,22 @@ nlu:
    - Next turn
    - Close the turn
    - Pass
+
+- synonym: archer
+  examples: |
+   - bowman
+   - ranger
+   - bowmen
+- synonym: horseman
+  examples: |
+   - rider
+   - knight
+   - cavalry
+   - horsemen
+- synonym: spearman
+  examples: |
+   - spearmen
+   - spear man
+   - spear men
+   - pikeman
+   - lance
