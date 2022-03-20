@@ -1,6 +1,11 @@
 version: '3.0'
 
 entities:
-- title
-- day
-- time
+  - unit:
+      roles:
+      - target
+      - source
+  - field:
+      roles:
+      - target
+      - source
