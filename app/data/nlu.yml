@@ -24,23 +24,25 @@ nlu:
    - Attack the unit on [F1]{"entity":"field", "role": "target"} with the [horseman]{"entity":"unit", "role": "source"}.
    - Attack the unit on [A1]{"entity":"field", "role": "target"} with the [bowman]{"entity":"unit", "role": "source"}.
    - Attack the base on [G2]{"entity":"field", "role": "target"} with the [spear man]{"entity":"unit", "role": "source"}.
-   - Attack the archer on [A11]{"entity":"field", "role": "target"} with the [archer]{"entity":"unit", "role": "source"}.
+   - Attack the archer on [A 11]{"entity":"field", "role": "target"} with the [archer]{"entity":"unit", "role": "source"}.
+   - Attack the archer on [A11]{"entity":"field", "role": "target"} with the [Archer]{"entity":"unit", "role": "source"}.
    - Destroy [B3]{"entity":"field", "role": "target"} with the [pikeman]{"entity":"unit", "role": "source"}.
    - Destroy [F14]{"entity":"field", "role": "target"} with the [rider]{"entity":"unit", "role": "source"}.
    - Destroy the unit on [V14]{"entity":"field", "role": "target"} with the [cavalry]{"entity":"unit", "role": "source"}.
    - Destroy the unit on [K4]{"entity":"field", "role": "target"} with the [bowmen]{"entity":"unit", "role": "source"}.
    - Attack [G72]{"entity":"field", "role": "target"}.
-   - Attack [F2]{"entity":"field", "role": "target"}.
+   - Attack [F 2]{"entity":"field", "role": "target"}.
    - Destroy [K2]{"entity":"field", "role": "target"}.
    - Attack the archer.
    - Attack the bowman.
    - Destroy the horseman.
    - Attack with the [ranger]{"entity":"unit", "role": "source"}.
+   - Attack with the [Archer]{"entity":"unit", "role": "source"}.
    - Attack with the [pikeman]{"entity":"unit", "role": "source"}.
    - Destroy with the [spear men]{"entity":"unit", "role": "source"}.
    - Attack with the [knight]{"entity":"unit", "role": "source"}.
    - Attack the pikeman on [C1]{"entity":"field", "role": "target"} with the [spearman]{"entity":"unit", "role": "source"}.
-   - Attack the unit on [G3]{"entity":"field", "role": "target"} with the [spearmen]{"entity":"unit", "role": "source"}.
+   - Attack the unit on [G 3]{"entity":"field", "role": "target"} with the [spearmen]{"entity":"unit", "role": "source"}.
    - Attack the unit on [L33]{"entity":"field", "role": "target"} with the [lance]{"entity":"unit", "role": "source"}.
 - intent: produce
   examples: |
@@ -75,6 +77,42 @@ nlu:
    - Nevermind
    - I want to do something else
    - Do something else
+- intent: request_unit_move_range
+  examples: |
+   - How far can the [lance](unit) move?
+   - How far can the [pikeman](unit) move?
+   - How far can the [rider](unit) move?
+   - How far can the [knight](unit) move?
+   - How far can the [archer](unit) move?
+   - How far can the [spearman](unit) move?
+   - What is the move distance of the [bowmen](unit)?
+   - What is the move distance of the [spear man](unit)?
+- intent: request_turn
+  examples: |
+   - In which turn are we?
+   - What is the current turn?
+   - Wich round is it now?
+- intent: request_moves
+  examples: |
+   - What can I do with the [archer](unit)?
+   - What can I do with the [knight](unit)?
+   - What can I do with the [lance](unit)?
+   - What can I do with the [spearman](unit)?
+   - What can I do with the [rider](unit)?
+   - What can the [rider](unit) do?
+   - What can the [bowmen](unit) do?
+   - What can the [cavalry](unit) do?
+   - What can the [spearmen](unit) do?
+   - What can the [horsemen](unit) do?
+   - What can the [archer](unit) do?
+
+- intent: approve
+  examples: |
+   - Do that
+   - I would like to do this
+   - This sounds good
+   - I want to do it
+   - Ok, do it.
 
 - synonym: archer
   examples: |
