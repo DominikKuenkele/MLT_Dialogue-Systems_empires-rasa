@@ -1,4 +1,10 @@
 # empires-rasa
+> Part of the Master in Language Technology at the University of Gothenburg
+>
+> **Course:** Dialogue Systems (LT2216)
+>
+> **Assignment:** Final project
+
 This project contains the training data and pipelines for a rasa server to classify intents and extract entities from utterances for the game [Empires](https://github.com/DominikKuenkele/empires).
 It acts more as a starting point, to handle the basic commands than a complete training data set.
 
